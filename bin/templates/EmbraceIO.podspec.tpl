@@ -35,6 +35,7 @@ Pod::Spec.new do |spec|
     core.dependency "EmbraceIO/EmbraceUploadInternal"
     core.dependency "EmbraceIO/EmbraceObjCUtilsInternal"
     core.dependency "EmbraceIO/EmbraceSemantics"
+    core.dependency "EmbraceIO/EmbraceConfiguration"
   end
 
   spec.subspec 'EmbraceCommonInternal' do |common|
@@ -54,6 +55,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'EmbraceConfigInternal' do |config|
     config.vendored_frameworks = "xcframeworks/EmbraceConfigInternal.xcframework"
     config.dependency "EmbraceIO/EmbraceCommonInternal"
+    config.dependency "EmbraceIO/EmbraceConfiguration"
   end
 
   spec.subspec 'EmbraceOTelInternal' do |otel|
